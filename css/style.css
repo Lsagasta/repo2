@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+*{
+	font-family: 'Roboto' sans-serif;
+	margin: 0;
+	padding: 0;
+	color: black;
+	box-sizing: border-box;
+}
+
+body{
+	background-image: url(../img/fondo3.png);
+	background-attachment: fixed;
+	overflow-x: hidden;
+}
+
+h1,h2,h3{
+	color: #AA5EE7;
+	}
+
+p{
+	color:black;
+	line-height: 2rem;
+	font-size: 1.6rem;
+}
+
+.title{
+	text-align: center;
+}
+
+/*defino el grid layout - 1 col y rows auto*/
+.contenedor{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: "nav" "header" "noticias" "resultados" "suscrib" "footer" ;
+}
+
+/* nombres de areas */
+#mainNav{
+	grid-area: nav;
+	background-color:#160818;
+	}
+
+#header{
+	grid-area: header;
+	background-color: #344E9C;
+}
+
+#noticias{
+	grid-area: noticias;
+	background-color: #110F2C;
+	padding: 20px;
+	}
+
+#resultados{
+	grid-area: resultados;
+	background-color: #0C040B;
+	padding: 20px;
+	}
+
+#suscrib{
+	grid-area: suscrib;
+	background-color: #0C040B;
+	
+	}
+
+#footer{
+	grid-area: footer;
+	background-color: #030101;
+	}
+
+	.botonera {
+			/*position*/
+		position: sticky;
+		top: 0;
+		/*padding*/
+		padding: 0px 30px;
+		/****display flex****/
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.botonera img{
+		width: 90px;
+		margin-bottom: 5px;
+	}
+
+	.botonera ol{
+		/****display flex****/
+		display: flex;
+	}
+
+	.botonera ol li{
+		list-style: none;
+		margin-right: 10px;
+	}
+
+		.botonera ol li a{
+			font-size: 1.2rem;
+			text-decoration: none;
+			color: #D7D29C
+
+;
+		}
+
+		/*hover*/
+		.botonera ol li a:hover{
+			color: black;
+			font-weight: 600;
+		}
+
+.img_ban{
+	 	width: 100%;
+ 		display: flex;
+	 	justify-content: center;
+}
+
+.container{
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	}
+
+.card{
+	width: 100%;
+	gap: 10px;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 20px;	
+	border-radius: 6px;
+	background: #CAA1D9
+;
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+}
+.card img{
+	width: 100%;
+}
+.contenido{
+	padding: 15px;
+	text-align: center;
+}
+
+.ultimosRes{display: flex;
+flex-direction: column;
+align-items: center;}
+
+.ultimosRes h1{
+	display: inline-block;
+	text-align: center;
+	flex-direction: column;
+}
+.ultimosRes table{
+	display: inline-block;
+	align-items: center;
+	flex-direction: column;
+}
+.ultimosRes table tr td {
+	color: black;
+	text-align: center;
+	padding: 10px;
+	margin: 5px;
+	background-color: #CAA1D9;
+}
+
+.suscrip{
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 20px;
+}
+
+.suscrip legend, label, option,input ,select {
+
+	color: #AA5EE7;
+	font-size: 1.6rem;
+	margin: 10px;
+	
+}
+
+.foot {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.foot div p {
+	color: #D7D29C;
+	text-align: center;
+}
+
+
+.contenedor2{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: "nav" "header" "torneos" "footer" ;
+}
+
+#torneos{
+	grid-area: torneos;
+	background-color: #110F2C;
+	padding: 20px;
+	}
+
+
+.cups{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.cups p {
+
+	padding: 15px;
+	text-align: center;
+}
+
+
+@media (min-width: 800px){
+	.contenedor {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(5, auto);
+		grid-template-areas: "nav nav nav" 
+		"header header header" 
+		"resultados noticias noticias " 
+		"suscrib suscrib suscrib" 
+		"footer footer footer";
+	}
+
+	#noticias {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.card{
+		width: 40%;
+		gap: 10px;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		margin: 20px;	
+		border-radius: 6px;
+		background: #CAA1D9
+	;
+		box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+	}
+
+	#resultados{display: flex;
+	flex-direction: column;
+	align-items: center;}
+
+
+
+}
+
+
+
