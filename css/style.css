@@ -80,6 +80,7 @@ p{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
 	}
 
 	.botonera img{
@@ -95,12 +96,14 @@ p{
 	.botonera ol li{
 		list-style: none;
 		margin-right: 10px;
+
 	}
 
 		.botonera ol li a{
 			font-size: 1.2rem;
 			text-decoration: none;
 			color: #D7D29C
+
 
 ;
 		}
@@ -244,9 +247,9 @@ align-items: center;
 		justify-content: space-evenly;
 		margin: 20px;	
 		border-radius: 6px;
-		background: #CAA1D9
-	;
+		background: #CAA1D9;
 		box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+		transition: all	0.4s;
 	}
 
 	#resultados{display: flex;
@@ -254,8 +257,23 @@ align-items: center;
 	align-items: center;}
 
 
-
 }
 
 
+/* Animaciones */
 
+.card:hover {
+
+		transform: translate(2%, -2%);
+		background:  violet;
+}
+
+.botonera li a:hover{
+	background:  violet;
+	font-size: 1.6rem
+	
+}
+
+.foot img:hover{
+transform: scale(1.3);
+}
